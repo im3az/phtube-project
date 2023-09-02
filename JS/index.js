@@ -29,6 +29,9 @@ const handleLoadVideos = async (categoryId) => {
   if (data.status === true) {
     data.data.forEach((news) => {
       // console.log(news.others?.posted_date);
+      const blankCards = document.getElementById("empty-card-container");
+      blankCards.classList.add("hidden");
+
       let time = news.others?.posted_date;
       const second = 1000;
       const minute = second * 60;
