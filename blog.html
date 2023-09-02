@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PH Tube Blog</title>
+
+    <!-- Tailwind and Daisy UI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Inter Sans font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      .font-inter-sans {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="font-inter-sans mt-5">
+    <header>
+      <div class="navbar bg-base-100">
+        <a class="ml-14 normal-case text-4xl font-bold text-[#FF1F3D]"
+          >PH Tube Blog</a
+        >
+      </div>
+      <div class="divider"></div>
+    </header>
+    <main>
+      <!-- first -->
+      <div class="mx-7">
+        <li class="text-4xl font-semibold marker:text-4xl text-[#FF1F3D]">
+          Discuss the scope of var, let, and const:
+        </li>
+        <p class="text-[#5D5D5D] text-xl font-medium ml-12 mt-4">
+          Var, let, and const are keywords for declaring variables in
+          JavaScript. They have different scopes and behaviors. <br /><br />
+
+          Var variables are scoped to the immediate function body or the global
+          scope. They can be updated and re-declared within their scope. They
+          are also hoisted, meaning they can be accessed before they are
+          declared123. <br /><br />
+          Let variables are scoped to the nearest block (such as a loop or an if
+          statement). They can be updated but not re-declared within their
+          scope. They are not hoisted, meaning they cannot be accessed before
+          they are declared1234. <br /><br />
+          Const variables are also scoped to the nearest block. They cannot be
+          updated or re-declared within their scope. They are not hoisted
+          either. They must be initialized with a value when they are
+          declared1234. <br /><br />
+          Some style guides recommend using const over let whenever a variable
+          is not reassigned in its scope, to make the intent clear that a
+          variable's type or value can never change4.
+        </p>
+      </div>
+
+      <!-- second -->
+      <div class="mt-28 mx-7">
+        <li class="text-4xl font-semibold marker:text-4xl text-[#FF1F3D]">
+          Tell us the use cases of null and undefined:
+        </li>
+        <p class="text-[#5D5D5D] text-xl font-medium ml-12 mt-4">
+          Null and undefined are two special values in JavaScript that represent
+          the absence of a meaningful value. However, they have different
+          meanings and use cases. <br />
+          <br />
+
+          Null is used to indicate that a variable has been explicitly assigned
+          to have no value. It is often used to represent the intentional
+          absence of an object. undefined is used to indicate that a variable
+          has not been assigned a value at all, or that a property does not
+          exist on an object. It is often used to represent the unintentional
+          absence of a value. <br />
+          <br />
+          For example, you can use null to indicate that a function parameter is
+          optional, or that a callback function has no error. You can use
+          undefined to check if a variable has been declared, or if an array
+          element is missing.
+        </p>
+      </div>
+
+      <!-- third -->
+      <div class="mt-28 mx-7 mb-12">
+        <li class="text-4xl font-semibold marker:text-4xl text-[#FF1F3D]">
+          What do you mean by REST API?
+        </li>
+        <p class="text-[#5D5D5D] text-xl font-medium ml-12 mt-4">
+          A REST API is a way for applications or devices to communicate with
+          each other using a set of rules and principles. REST stands for
+          representational state transfer and it is a style of software
+          architecture. A REST API consists of resources that can be identified
+          by URLs and can be manipulated using HTTP methods such as GET, POST,
+          PUT, DELETE, etc.
+        </p>
+      </div>
+    </main>
+  </body>
+</html>

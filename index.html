@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PH Tube</title>
+
+    <!-- Tailwind and Daisy UI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Inter Sans font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      .font-inter-sans {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="font-inter-sans md:mx-1 lg:mx-14">
+    <header>
+      <nav class="my-5">
+        <div class="navbar bg-base-100">
+          <div class="navbar-start">
+            <img src="./Images/Logo.png" alt="" />
+          </div>
+          <div class="navbar-center">
+            <button class="btn normal-case text-lg font-medium">
+              Sort by view
+            </button>
+          </div>
+          <div class="navbar-end w-20 md:w-1/2 lg:w-1/2">
+            <button onclick="goToBlogPage()"
+              class="btn bg-[#FF1F3D] normal-case text-lg font-medium text-white"
+            >
+              Blog
+            </button>
+          </div>
+        </div>
+      </nav>
+      <div class="divider"></div>
+    </header>
+    <main>
+      <!-- tab container -->
+      <div class="flex justify-center gap-4" id="tab-container">
+        <!-- <button  class="btn">All</button>
+          <button class="btn">Music</button>
+          <button class="btn">Comedy</button>
+          <button class="btn">Drawing</button>   -->
+      </div>
+
+      <!-- Card container -->
+      <div
+        id="card-container"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-10"
+      >
+        <!-- cards -->
+        <!-- <div class="card w-96 bg-base-100">
+          <figure>
+            <img src="./Images/Rectangle 1.jpg" alt="Shoes" />
+          </figure>
+          <div class="card-body">
+            <div class="flex gap-4">
+              <img src="./Images/Ellipse 1.svg" class="w-10 h-10" alt="" />
+              <div class="">
+                <h2 class="card-title text-base font-bold mb-2">
+                  Building a Winning UX Strategy Using the Kano Model
+                </h2>
+                <h2 class="text-sm font-normal mb-2">
+                  Awlad Hossain
+                  <img
+                    id="badge"
+                    src="./Images/fi_10629607.svg"
+                    alt=""
+                    class="inline-block"
+                  />
+                </h2>
+                <h2 class="text-sm font-normal">91K views</h2>
+              </div>
+            </div>
+          </div>
+          <div class="relative bottom-52 left-56">
+            <h2
+              class="bg-black text-white text-xs font-normal p-1 w-28 text-center rounded"
+            >
+              3 hrs 56 min ago
+            </h2>
+          </div>
+        </div> -->
+
+
+      </div>
+
+      <!-- empty card container -->
+      <div id="empty-card-container" class="hidden">
+        <div class="grid justify-center text-center mt-28 " >
+          <div class="mx-auto">
+            <img src="./Images/Icon.png" alt="">
+          </div>
+          <div class="text-3xl font-bold mt-6 ">
+            <h2>Oops!! Sorry, There is no <br> content here.</h2>
+          </div>
+        </div>
+      </div>
+
+    </main>
+    <footer></footer>
+    <script src="JS/index.js"></script>
+  </body>
+</html>
