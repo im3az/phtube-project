@@ -28,13 +28,15 @@ const handleLoadVideos = async (categoryId) => {
 
   if (data.status === true) {
     data.data.forEach((news) => {
-      // console.log(news.others.posted_date);
-      const duration = news.others.posted_date;
-      let milliseconds = Math.floor((duration % 1000) / 100);
-      let seconds = Math.floor((duration / 1000) % 60);
-      let minutes = Math.floor((duration / (1000 * 60)) % 60);
-      let hours = Math.floor((duration / (1000 * 60 * 60)) % 24);
-      // console.log(hours);
+      // console.log(news.others?.posted_date);
+      let time = news.others?.posted_date;
+      const second = 1000;
+      const minute = second * 60;
+      const hour = minute * 60;
+
+      let hours = Math.floor((time / hour) % 24);
+      let minutes = Math.floor((time / minute) % 60);
+      let seconds = Math.floor((time / second) % 60);
 
       const div = document.createElement("div");
       div.innerHTML = `
@@ -44,7 +46,9 @@ const handleLoadVideos = async (categoryId) => {
         </figure>
       <div class="card-body">
         <div class="flex gap-4">
-          <img src=${news.authors[0].profile_picture} class="w-10 h-10 rounded-full" alt="" />
+          <img src=${
+            news.authors[0].profile_picture
+          } class="w-10 h-10 rounded-full" alt="" />
           <div class="">
             <h2 class="card-title text-base font-bold mb-2">
               ${news.title}
@@ -54,7 +58,9 @@ const handleLoadVideos = async (categoryId) => {
                 ${news.authors[0].profile_name}
               </h2>
               
-              <div id="badge-icon" ${(news.authors[0].verified ? 'block' : 'hidden')}>
+              <div id="badge-icon" ${
+                news.authors[0].verified ? "block" : "hidden"
+              }>
                 <img                 
                   src="./Images/fi_10629607.svg"
                   class="ml-2 "
@@ -65,11 +71,13 @@ const handleLoadVideos = async (categoryId) => {
           </div>
         </div>
       </div>
-    <div class="relative bottom-44 left-56  w-28">
+    <div class="relative bottom-44 left-44 w-40" ${
+      news.others?.posted_date ? "block" : "hidden"
+    }>
       <h2
         class="bg-black text-white text-xs font-normal p-1 text-center rounded"
       >
-        3 hrs 56 min ago
+        ${hours} hrs ${minutes} min ${seconds} sec ago
       </h2>
     </div>
   </div>
