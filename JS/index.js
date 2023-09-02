@@ -53,7 +53,8 @@ const handleLoadVideos = async (categoryId) => {
               <h2 class="text-sm font-normal mb-2 ">
                 ${news.authors[0].profile_name}
               </h2>
-              <div id="badge-icon" class="">
+              
+              <div id="badge-icon" ${(news.authors[0].verified ? 'block' : 'hidden')}>
                 <img                 
                   src="./Images/fi_10629607.svg"
                   class="ml-2 "
